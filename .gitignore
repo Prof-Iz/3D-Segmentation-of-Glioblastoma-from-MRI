@@ -1,0 +1,6 @@
+Datasets/
+cache/
+MNIST/
+.ipynb_checkpoints/
+learning_pl.*
+tb_logs/MNIST_Model/
