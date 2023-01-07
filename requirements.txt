@@ -1,0 +1,6 @@
+numpy==1.24.1
+pandas==1.5.2
+scikit_learn==1.2.0
+monai==1.1.0
+monai[einops]
+pytorch_lightning

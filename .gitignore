@@ -5,3 +5,5 @@ MNIST/
 learning_pl.*
 tb_logs/MNIST_Model/
 temp*
+MICCAI_BraTS*Data
+.vscode
