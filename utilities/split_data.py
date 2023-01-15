@@ -33,23 +33,17 @@ def train_val_test_dataset(data_path: str):
     data = pd.read_csv(data_path)
     data = data[["Grade", "BraTS_2020_subject_ID"]]
     data.Grade = data["Grade"].map(encode_lgg_hgg)
-    (
-        training,
-        validation,
-        train_check,
-        val_check,
-    ) = train_test_split(
+    (training, validation, train_check, val_check,) = train_test_split(
         data.BraTS_2020_subject_ID.to_list(),
         data.Grade.to_numpy(),
         test_size=0.2,
         random_state=42,
         stratify=data.Grade.to_numpy(),
-        shuffle=True
+        shuffle=True,
     )
 
-
-
-    print(f'''
+    print(
+        f"""
     Total Samples = {len(training)+len(validation)}\n
     Ratio of LGG:HGG in {len(training)} Training Samples:
     \t Ratio = {np.count_nonzero(train_check==0)/np.count_nonzero(train_check==1):.2f}\n
@@ -57,10 +51,8 @@ def train_val_test_dataset(data_path: str):
     Ratio of LGG:HGG in {len(validation)} Validation Samples:
     \t Ratio = {np.count_nonzero(val_check==0)/np.count_nonzero(val_check==1):.2f}\n
     
-    ''')
-    
-
-
+    """
+    )
 
     return (training, validation)
 
@@ -70,5 +62,5 @@ def train_val_test_dataset(data_path: str):
 
 if __name__ == "__main__":
     name_map_path = r"C:\Users\ibrah\Documents\Projects\3D-Segmentation-of-Glioblastoma-from-MRI\MICCAI_BraTS2020_TrainingData\name_mapping.csv"
-    train, val= train_val_test_dataset(name_map_path)
+    train, val = train_val_test_dataset(name_map_path)
 # %%
