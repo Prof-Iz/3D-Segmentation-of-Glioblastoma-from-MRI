@@ -8,3 +8,4 @@ temp*
 MICCAI_BraTS*Data
 .vscode
 */__pycache__
+.idea
