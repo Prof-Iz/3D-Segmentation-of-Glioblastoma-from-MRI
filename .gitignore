@@ -9,3 +9,4 @@ MICCAI_BraTS*Data
 .vscode
 */__pycache__
 .idea
+experiments/*cache*
