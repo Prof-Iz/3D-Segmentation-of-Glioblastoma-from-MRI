@@ -1,0 +1,7 @@
+Patch 128
+Focal Dice Gamma 2 
+Input Channels 512 256 128 64
+Gaussian Sliding Window Inference
+Input Foreground Channel
+
+

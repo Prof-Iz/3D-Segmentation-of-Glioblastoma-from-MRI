@@ -1,0 +1,7 @@
+Patch 128
+DICE CE
+Input Channels 128 64 32 16
+Gaussian Sliding Window Inference
+2 res
+no foreground
+
